@@ -65,5 +65,11 @@ namespace StudentCrud.Domain.Implementation
             return Response<List<Students>>.Success("All Students", student, 200);
         }
 
+        public async Task<Response<dynamic>> getStudent(Guid StudentId)
+        {
+            var student = await _studentRepository.GetStudentsbyIDAsync(StudentId);
+            return Response<dynamic>.Success("Student", student, 200);
+        }
+
     }
 }

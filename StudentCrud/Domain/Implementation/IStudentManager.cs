@@ -10,5 +10,6 @@ namespace StudentCrud.Domain.Implementation
         Task<Response<dynamic>> UpdateStudent(studentrequest request);
         Task<Response<dynamic>> DeleteStudent(Guid StudentId);
         Task<Response<List<Students>>> getAllStudents();
+        Task<Response<dynamic>> getStudent(Guid StudentId);
     }
 }

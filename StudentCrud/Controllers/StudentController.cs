@@ -48,5 +48,13 @@ namespace StudentCrud.Controllers
             if (response.Status) return Ok(response);
             return BadRequest(response);
         }
+
+        [HttpGet("Student")]
+        public async Task<IActionResult> GetStudent(Guid StudentId)
+        {
+            var response = await _studentManager.getStudent(StudentId);
+            if (response.Status) return Ok(response);
+            return BadRequest(response);
+        }
     }
 }
